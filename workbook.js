@@ -126,7 +126,7 @@
               if (range.e.c < C) range.e.c = C;
 
               var cell = (typeof data[R][C] == 'object' ? data[R][C] : {v: data[R][C] });
-              if (cell.v == null) continue;
+              if (cell.v == null && cell.f == null) continue;
               var cell_ref = encode_cell({c: C, r: R});
 
               if (typeof cell.v === 'number') cell.t = 'n';
